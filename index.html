@@ -38,7 +38,7 @@
   }
 
   /* Layout */
-  main { max-width: 900px; margin: 0 auto; padding: 0 2rem 6rem; }
+  main { max-width: 920px; margin: 0 auto; padding: 0 2rem 6rem; }
 
   section { padding: 5rem 0 0; }
 
@@ -60,8 +60,8 @@
   }
 
   .nav-name {
-    font-family: var(--font-mono);
-    font-size: var(--text-md);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: var(--text-xl);
     font-weight: 500;
     letter-spacing: 0;
     color: var(--text);
@@ -130,9 +130,8 @@
   /* Section headings */
   .section-label {
     font-family: var(--font-mono);
-    font-size: var(--text-sm);
+    font-size: var(--text-lg);
     letter-spacing: 0;
-    text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 2rem;
     display: flex;
@@ -154,9 +153,8 @@
 
   .subsection-label {
     font-family: var(--font-mono);
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
     letter-spacing: 0;
-    text-transform: uppercase;
     color: var(--accent);
     margin: 2rem 0 1rem;
   }
@@ -190,7 +188,7 @@
   .teaching-term { float: right; }
   .teaching-item .role {
     font-family: var(--font-mono);
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
     color: var(--accent);
     margin-bottom: 0.2rem;
   }
@@ -265,6 +263,7 @@
   <a href="#about" class="nav-name">Yuhang Zhu</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="CV_Zhu.pdf" target="_blank">CV</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#teaching">Teaching</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -277,14 +276,14 @@
     <div class="profile-layout">
       <div class="profile-card">
         <img src="Photo_Yuhang_Zhu.jpg" alt="Yuhang Zhu">
-        <p>Email: <a href="mailto:yzhu71@ucmerced.edu">yzhu71@ucmerced.edu</a></p>
-        <p><a href="https://www.dropbox.com/scl/fi/o19vvmosqz0cpzxjzwrmf/CV_Yuhang_Zhu.pdf?rlkey=uqzg95dcmo34kaoptlwpv0bma&st=fhsg9zfp&dl=0" target="_blank">Curriculum Vitae</a></p>
+        <!-- <p><p>Email: <a href="mailto:yzhu71@ucmerced.edu">yzhu71@ucmerced.edu</a></p> -->
+        <!-- <p><a href="https://www.dropbox.com/scl/fi/o19vvmosqz0cpzxjzwrmf/CV_Yuhang_Zhu.pdf?rlkey=uqzg95dcmo34kaoptlwpv0bma&st=fhsg9zfp&dl=0" target="_blank">Curriculum Vitae</a></p> -->
       </div>
         <div class="profile-bio">
-          <p>I am a PhD student in Political Science at the University of California, Merced. I am also a research affiliate with the Political Economy of Agriculture and Rural Societies (<a href="https://sites.ucmerced.edu/pears/about">PEARS</a>) lab.</p>
-          <p>My <a href="#research">research</a> examines the political consequences of labor-saving technological change, with a focus on how automation shapes public opinion, electoral behavior, and collective action.</p>
-          <p>Prior to UC Merced, I earned my BA and MA in Political Science from Nanjing University, China.</p>
+          <p>Welcome! I am a PhD student in Political Science at the University of California, Merced and a research affiliate with the Political Economy of Agriculture and Rural Societies (<a href="https://sites.ucmerced.edu/pears/about">PEARS</a>) lab. I received my BA and MA in Political Science from Nanjing University, China.</p>
+          <p>My research examines the political consequences of technological change. I focus on how automation and artificial intelligence shape public attitudes, electoral behavior, and collective action across advanced economies, drawing on causal inference and computational methods.</p>
         </div>
+      </div>
     </div>
   </section>
 
@@ -295,14 +294,16 @@
 
     <div class="research-item">
       <h3>Automation Risk, Policy Mapping, and Policy Preferences. <em>Submitted</em></h3>
-      <p class="body-copy">Abstract: Do political preferences change in response to automation risk? Existing observational and experimental studies provide conflicting evidence. This study reconciles these findings by proposing a two-stage framework in which individuals should first perceive automation risk and then map that risk onto concrete policy responses. I test this argument using two preregistered survey experiments in the United States that vary whether automation risk is presented alone or linked to redistribution and regulatory policies. The results indicate that linking automation risk to these policies generally does not shift support, with the exception of increased support for slowing the adoption of new technologies in the workplace. These findings suggest that preference change depends on whether individuals connect risks to policy options, but that this process is conditional on specific policy domains and sensitive to the broader information environment.</p>
+      <button onclick="toggleAbstract(this)" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: 0.5px solid var(--border); border-radius: 2px; padding: 3px 10px; cursor: pointer; margin-top: 8px;">Abstract ↓</button>
+      <p class="abstract" style="display: none; font-size: 1.25rem; color: #444; line-height: 1.7; margin-top: 0.6rem; text-align: justify;">Do political preferences change in response to automation risk? Existing observational and experimental studies provide conflicting evidence. This study reconciles these findings by proposing a two-stage framework in which individuals should first perceive automation risk and then map that risk onto concrete policy responses. I test this argument using two preregistered survey experiments in the United States that vary whether automation risk is presented alone or linked to redistribution and regulatory policies. The results indicate that linking automation risk to these policies generally does not shift support, with the exception of increased support for slowing the adoption of new technologies in the workplace. These findings suggest that preference change depends on whether individuals connect risks to policy options, but that this process is conditional on specific policy domains and sensitive to the broader information environment.</p>
     </div>
 
     <p class="subsection-label">Work in Progress</p>
 
     <div class="research-item">
       <h3>AI-assisted Social Science Discovery: An End-to-End Framework for Learning from Unstructured Data (with <a href="https://sites.google.com/view/adasgupta/home">Aditya Dasgupta</a> and <a href="https://www.tesaliarizzo.com/">Tesalia Rizzo</a>)</h3>
-      <p class="body-copy">Abstract: We propose usage of artificial intelligence (AI) algorithms for vision and natural language to assist in discovering potential determinants of human behavior that manual variable selection might miss. Our framework involves training a deep learning algorithm end-to-end to predict a target behavior of interest directly from unstructured data such as imagery and text that provides a naturalistic representation of the agent's decision-making environment. We then use explainable artificial intelligence (XAI) tools to discover underlying relationships learned by the algorithm. We provide information-theoretic grounding for the framework and develop new tools for translating machine-learned into human-interpretable relationships, an interface that becomes important as AI is integrated into social science research workflows. We illustrate how the approach surfaces novel relationships in two cases: understanding how Chinese social media monitors choose what content to censor and how the built environment affects the turnout decisions of Mexican voters.</p>
+      <button onclick="toggleAbstract(this)" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: 0.5px solid var(--border); border-radius: 2px; padding: 3px 10px; cursor: pointer; margin-top: 8px;">Abstract ↓</button>
+      <p class="abstract" style="display: none; font-size: 1.25rem; color: #444; line-height: 1.7; margin-top: 0.6rem; text-align: justify;">We propose usage of artificial intelligence (AI) algorithms for vision and natural language to assist in discovering potential determinants of human behavior that manual variable selection might miss. Our framework involves training a deep learning algorithm end-to-end to predict a target behavior of interest directly from unstructured data such as imagery and text that provides a naturalistic representation of the agent's decision-making environment. We then use explainable artificial intelligence (XAI) tools to discover underlying relationships learned by the algorithm. We provide information-theoretic grounding for the framework and develop new tools for translating machine-learned into human-interpretable relationships, an interface that becomes important as AI is integrated into social science research workflows. We illustrate how the approach surfaces novel relationships in two cases: understanding how Chinese social media monitors choose what content to censor and how the built environment affects the turnout decisions of Mexican voters.</p>
     </div>
 
     <div class="research-item">
@@ -317,17 +318,17 @@
       <div class="role">Teaching Assistant</div>
       <h4>University of California, Merced</h4>
       <p class="teaching-courses">
-        POLI 003 Introduction to Comparative Politics (Prof. Menon) <em class="teaching-term">Spring 2026</em><br>
-        POLI 001 Introduction to American Politics (Prof. DeHart) <em class="teaching-term">Fall 2025</em><br>
-        POLI 112 Public Policy (Prof. Denny) <em class="teaching-term">Spring 2024</em><br>
-        POLI 125 Public Opinion (Prof. DeHart) <em class="teaching-term">Fall 2023</em>
+        POLI 003 Introduction to Comparative Politics (Prof. Menon), Spring 2026<br>
+        POLI 001 Introduction to American Politics (Prof. DeHart), Fall 2025<br>
+        POLI 112 Public Policy (Prof. Denny), Spring 2024<br>
+        POLI 125 Public Opinion (Prof. DeHart), Fall 2023
       </p>
     </div>
 
     <div class="teaching-item">
       <div class="role">Graduate Student Instructor</div>
       <p class="teaching-courses">
-        R Bootcamp <em class="teaching-term">August 2025</em>
+        R Bootcamp, August 2025
       </p>
     </div>
 
@@ -351,7 +352,7 @@
 </main>
 
 <footer>
-  Yuhang Zhu © 2026
+  YUHANG ZHU © 2026
 </footer>
 
 <script>
@@ -366,6 +367,12 @@
       }
     });
   });
+  function toggleAbstract(btn) {
+  const abstract = btn.nextElementSibling;
+  const open = abstract.style.display === 'block';
+  abstract.style.display = open ? 'none' : 'block';
+  btn.textContent = open ? 'Abstract ↓' : 'Abstract ↑';
+}
 </script>
 </body>
 </html>

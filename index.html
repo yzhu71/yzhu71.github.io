@@ -368,12 +368,13 @@
       }
     });
   });
+
   function toggleAbstract(btn) {
-  const abstract = btn.nextElementSibling;
-  const open = abstract.style.display === 'block';
-  abstract.style.display = open ? 'none' : 'block';
-  btn.textContent = open ? 'Abstract ↓' : 'Abstract ↑';
-}
+    const abstract = btn.parentElement.querySelector('.abstract');
+    const open = abstract.style.display === 'block';
+    abstract.style.display = open ? 'none' : 'block';
+    btn.textContent = open ? 'Abstract ↓' : 'Abstract ↑';
+  }
 </script>
 </body>
 </html>

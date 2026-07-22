@@ -5,20 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yuhang Zhu</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap');
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --font-serif: 'Crimson Pro', Georgia, serif;
-    --font-mono: 'Space Mono', Consolas, monospace;
-    --text-xs: 0.85rem;
-    --text-sm: 0.95rem;
-    --text-md: 1.09rem;
-    --text-lg: 1.25rem;
-    --text-xl: 1.47rem;
-    --text-2xl: 1.84rem;
-    --text-3xl: 2.89rem;
+    --font-serif: Georgia, 'Times New Roman', serif;
+    --font-mono: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --text-xs: 0.82rem;
+    --text-sm: 0.9rem;
+    --text-md: 0.95rem;
+    --text-lg: 1.05rem;
+    --text-xl: 1.2rem;
+    --text-2xl: 1.45rem;
+    --text-3xl: 2.25rem;
     --accent: #185FA5;
     --accent-light: #E6F1FB;
     --text: #1a1a18;
@@ -30,8 +28,8 @@
 
   body {
     font-family: var(--font-serif);
-    font-size: 22.4px;
-    line-height: 1.72;
+    font-size: 16px;
+    line-height: 1.6;
     color: var(--text);
     background: var(--bg);
     min-height: 100vh;
@@ -40,7 +38,7 @@
   /* Layout */
   main { max-width: 920px; margin: 0 auto; padding: 0 2rem 6rem; }
 
-  section { padding: 5rem 0 0; }
+  section { padding: 3rem 0 0; }
 
   a { color: var(--accent); }
 
@@ -62,7 +60,7 @@
   }
 
   .nav-name {
-    font-family: 'Crimson Pro', Georgia, serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: var(--text-xl);
     font-weight: 500;
     letter-spacing: 0;
@@ -132,9 +130,10 @@
   /* Section headings */
   .section-label {
     font-family: var(--font-mono);
-    font-size: var(--text-lg);
-    letter-spacing: 0;
-    color: var(--muted);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: #57564f;
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -146,7 +145,7 @@
     content: '';
     flex: 1;
     height: 0.5px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.15);
   }
 
   .section-label::before {
@@ -163,7 +162,7 @@
 
   /* Research */
   .research-item { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 0.5px solid var(--border); }
-  .research-item:last-child { border-bottom: none; }
+  .research-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
 
   .research-item h3 {
     font-size: var(--text-xl);
@@ -179,6 +178,53 @@
     font-size: var(--text-lg);
     line-height: 1.7;
     margin-top: 0.6rem;
+  }
+
+  /* CV */
+  .cv-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cv-actions a {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    border: 0.5px solid var(--border);
+    border-radius: 2px;
+    padding: 5px 12px;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .cv-actions a:hover { color: var(--accent); border-color: var(--accent); }
+
+  .cv-version {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  .cv-embed {
+    border: 0.5px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f6f6f4;
+  }
+
+  .cv-embed object { display: block; }
+
+  .cv-embed p {
+    font-size: var(--text-md);
+    color: var(--muted);
+    padding: 2rem;
+    text-align: center;
   }
 
   /* Teaching */
@@ -236,11 +282,9 @@
 
   @media (max-width: 560px) {
     :root {
-      --text-lg: 1.17rem;
-      --text-xl: 1.33rem;
-      --text-3xl: 2.24rem;
+      --text-3xl: 1.9rem;
     }
-    body { font-size: 20.4px; }
+    body { font-size: 15.5px; }
     main { padding: 0 1.25rem 4rem; }
     nav { justify-content: center; padding: 0 1.25rem; }
     .nav-name { display: none; }
@@ -265,6 +309,8 @@
       border-radius: 4px;
     }
     .contact-grid { grid-template-columns: 1fr; }
+    .cv-version { margin-left: 0; }
+    .cv-embed object { height: 520px; }
     .teaching-term {
       display: block;
       float: none;
@@ -278,9 +324,9 @@
   <a href="#about" class="nav-name">Yuhang Zhu</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="assets/cv/CV_Zhu.pdf" target="_blank">CV</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#cv">CV</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -294,9 +340,8 @@
         <!-- <p><p>Email: <a href="mailto:yzhu71@ucmerced.edu">yzhu71@ucmerced.edu</a></p> -->
         <!-- <p><a href="assets/cv/CV_Zhu.pdf" target="_blank">Curriculum Vitae</a></p> -->
         <div style="margin-top: 1rem; padding: 0.75rem 0;">
-          <p style="font-family: 'Space Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem;">Upcoming Events</p>
+          <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.6rem;">Upcoming Events</p>
           <div style="font-size: 0.85rem; color: var(--text); line-height: 1.6; max-height: 80px; overflow-y: auto;">
-            <p style="padding-left: 0.6rem; border-left: 2px solid var(--accent); margin-bottom: 0.6rem;">PolMeth<br><span style="color: var(--muted); font-size: 0.8rem;">July 16–18, 2026 · East Lansing, MI</span></p>
             <p style="padding-left: 0.6rem; border-left: 2px solid var(--accent);">APSA Annual Meeting<br><span style="color: var(--muted); font-size: 0.8rem;">Sept 3–6, 2026 · Boston, MA</span></p>
           </div>
         </div>
@@ -315,23 +360,23 @@
 
     <p class="subsection-label">Working Papers</p>
 
-<div class="research-item">
+<div class="research-item" style="border-bottom: none; padding-bottom: 1rem; margin-bottom: 1rem;">
       <h3>Automation Risk, Policy Mapping, and Policy Preferences. <em>Under Review</em></h3>
-      <button onclick="toggleAbstract(this)" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: 0.5px solid var(--border); border-radius: 2px; padding: 3px 10px; cursor: pointer; margin-top: 8px;">Abstract ↓</button>
-      <a href="assets/papers/automation_policy_mapping.pdf" target="_blank" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: 0.5px solid var(--border); border-radius: 2px; padding: 3px 10px; cursor: pointer; margin-top: 8px; text-decoration: none; margin-left: 6px;">Manuscript</a>
-      <p class="abstract" style="display: none; font-size: 1.25rem; color: #444; line-height: 1.7; margin-top: 0.6rem; text-align: justify;">Do political preferences change in response to automation risk? Existing observational and experimental studies provide conflicting evidence. This study reconciles these findings by proposing a two-stage framework in which individuals should first perceive automation risk and then map that risk onto concrete policy responses. I test this argument using two preregistered survey experiments in the United States that vary whether automation risk is presented alone or linked to redistribution and regulatory policies. The results indicate that linking automation risk to these policies generally does not shift support, with the exception of increased support for slowing the adoption of new technologies in the workplace. These findings suggest that preference change depends on whether individuals connect risks to policy options, but that this process is conditional on specific policy domains and sensitive to the broader information environment.</p>
+      <button onclick="toggleAbstract(this)" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: 0.5px solid var(--border); border-radius: 2px; padding: 3px 10px; cursor: pointer; margin-top: 8px;">Abstract ↓</button>
+      <a href="assets/papers/automation_policy_mapping.pdf" target="_blank" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: 0.5px solid var(--border); border-radius: 2px; padding: 3px 10px; cursor: pointer; margin-top: 8px; text-decoration: none; margin-left: 6px;">Manuscript</a>
+      <p class="abstract" style="display: none; font-size: 0.95rem; color: #444; line-height: 1.6; margin-top: 0.6rem; text-align: justify;">Do political preferences change in response to automation risk? Existing observational and experimental studies provide conflicting evidence. This study reconciles these findings by proposing a two-stage framework in which individuals should first perceive automation risk and then map that risk onto concrete policy responses. I test this argument using two preregistered survey experiments in the United States that vary whether automation risk is presented alone or linked to redistribution and regulatory policies. The results indicate that linking automation risk to these policies generally does not shift support, with the exception of increased support for slowing the adoption of new technologies in the workplace. These findings suggest that preference change depends on whether individuals connect risks to policy options, but that this process is conditional on specific policy domains and sensitive to the broader information environment.</p>
+    </div>
+
+    <div class="research-item">
+      <h3>Investigating Taluk-Level Data for Colonial South India, 1891 - 1931 (with <a href="https://www.anil-menon.com/" target="_blank" rel="noopener noreferrer">Anil Menon</a> and <a href="https://www.alexander-persaud.com/" target="_blank" rel="noopener noreferrer">Alexander Persaud</a>). <em>Under Review</em></h3>
     </div>
 
     <p class="subsection-label">Work in Progress</p>
 
     <div class="research-item">
-      <h3>AI-assisted Social Science Discovery: An End-to-End Framework for Learning from Unstructured Data (with <a href="https://sites.google.com/view/adasgupta/home" target="_blank" rel="noopener noreferrer">Aditya Dasgupta</a> and <a href="https://www.tesaliarizzo.com/" target="_blank" rel="noopener noreferrer">Tesalia Rizzo</a>)</h3>
-      <button onclick="toggleAbstract(this)" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: 0.5px solid var(--border); border-radius: 2px; padding: 3px 10px; cursor: pointer; margin-top: 8px;">Abstract ↓</button>
-      <p class="abstract" style="display: none; font-size: 1.25rem; color: #444; line-height: 1.7; margin-top: 0.6rem; text-align: justify;">We propose usage of artificial intelligence (AI) algorithms for vision and natural language to assist in discovering potential determinants of human behavior that manual variable selection might miss. Our framework involves training a deep learning algorithm end-to-end to predict a target behavior of interest directly from unstructured data such as imagery and text that provides a naturalistic representation of the agent's decision-making environment. We then use explainable artificial intelligence (XAI) tools to discover underlying relationships learned by the algorithm. We provide information-theoretic grounding for the framework and develop new tools for translating machine-learned into human-interpretable relationships, an interface that becomes important as AI is integrated into social science research workflows. We illustrate how the approach surfaces novel relationships in two cases: understanding how Chinese social media monitors choose what content to censor and how the built environment affects the turnout decisions of Mexican voters.</p>
-    </div>
-
-    <div class="research-item">
-      <h3>Introducing Taluk-Level Panel Data and Shapefiles for Colonial South India, 1891 - 1931 (with <a href="https://www.anil-menon.com/" target="_blank" rel="noopener noreferrer">Anil Menon</a> and <a href="https://www.alexander-persaud.com/" target="_blank" rel="noopener noreferrer">Alexander Persaud</a>)</h3>
+      <h3>AI-Assisted Social Science Discovery: An End-to-End Framework for Learning from Unstructured Data (with <a href="https://sites.google.com/view/adasgupta/home" target="_blank" rel="noopener noreferrer">Aditya Dasgupta</a> and <a href="https://www.tesaliarizzo.com/" target="_blank" rel="noopener noreferrer">Tesalia Rizzo</a>)</h3>
+      <button onclick="toggleAbstract(this)" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: none; border: 0.5px solid var(--border); border-radius: 2px; padding: 3px 10px; cursor: pointer; margin-top: 8px;">Abstract ↓</button>
+      <p class="abstract" style="display: none; font-size: 0.95rem; color: #444; line-height: 1.6; margin-top: 0.6rem; text-align: justify;">We propose usage of artificial intelligence (AI) algorithms for vision and natural language to assist in discovering potential determinants of human behavior that manual variable selection might miss. Our framework involves training a deep learning algorithm end-to-end to predict a target behavior of interest directly from unstructured data such as imagery and text that provides a naturalistic representation of the agent's decision-making environment. We then use explainable artificial intelligence (XAI) tools to discover underlying relationships learned by the algorithm. We provide information-theoretic grounding for the framework and develop new tools for translating machine-learned into human-interpretable relationships, an interface that becomes important as AI is integrated into social science research workflows. We illustrate how the approach surfaces novel relationships in two cases: understanding how Chinese social media monitors choose what content to censor and how the built environment affects the turnout decisions of Mexican voters.</p>
     </div>
   </section>
 
@@ -356,6 +401,20 @@
       </p>
     </div>
 
+  </section>
+
+  <section id="cv">
+    <p class="section-label">CV</p>
+    <div class="cv-actions">
+      <a href="assets/cv/CV_Zhu.pdf" download>Download PDF</a>
+      <a href="assets/cv/CV_Zhu.pdf" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+      <span class="cv-version">Current Version: July 2026</span>
+    </div>
+    <div class="cv-embed">
+      <object data="assets/cv/CV_Zhu.pdf" type="application/pdf" width="100%" height="900">
+        <p>Your browser cannot display the CV inline. Please <a href="assets/cv/CV_Zhu.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab</a> or <a href="assets/cv/CV_Zhu.pdf" download>download the PDF</a>.</p>
+      </object>
+    </div>
   </section>
 
   <section id="contact">

@@ -251,7 +251,7 @@
     max-width: 760px;
     margin-top: 0.85rem;
     padding: 0.9rem 1.1rem;
-    background: #f7f7f4;
+    background: #F5F8FC;
     border-radius: 3px;
     text-align: justify;
   }
@@ -322,12 +322,12 @@
 
   .teaching-item {
     padding: 0.1rem 0 0.1rem 1.1rem;
-    border-left: 2px solid #B5D4F4;
+    border-left: 2px solid var(--accent);
     margin-bottom: 1.5rem;
     transition: border-color 0.18s ease;
   }
   .teaching-item:last-child { margin-bottom: 0; }
-  .teaching-item:hover { border-left-color: var(--accent); }
+  .teaching-item:hover { border-left-color: #0d4276; }
 
   .teaching-item h4 {
     font-size: var(--text-xl);
@@ -461,19 +461,27 @@
       <p class="subsection-label">Working Papers</p>
 
       <div class="research-item">
-        <span class="status-badge">Under Review</span>
+        <h3>AI on the Ballot: Is AI a Campaign Issue in the 2026 Midterms?</h3>
+        <p class="research-meta">with <a href="https://www.anil-menon.com/" target="_blank" rel="noopener noreferrer">Anil Menon</a></p>
+      </div>
+
+      <div class="research-item">
+        <h3>Investigating Taluk-Level Data for Colonial South India, 1891&#8211;1931</h3>
+        <p class="research-meta">R&amp;R at <em>Explorations in Economic History</em></p>
+        <p class="research-meta">with <a href="https://www.anil-menon.com/" target="_blank" rel="noopener noreferrer">Anil Menon</a> and <a href="https://www.alexander-persaud.com/" target="_blank" rel="noopener noreferrer">Alexander Persaud</a></p>
+        <div class="paper-actions">
+          <button class="paper-link" onclick="toggleAbstract(this)">Abstract &#8595;</button>
+        </div>
+        <p class="abstract">Data from colonial India have been used to test important questions in economic development and institutional economics. However, existing research has primarily relied on district-level data in tackling these questions. After documenting the structure of lower-level administration, we introduce the first subdistrict-level dataset for colonial India. We digitize five decadal censuses (1891&#8211;1931) covering subdistricts (taluks) in South India and provide corresponding shapefiles that allow for both single-year and panel analyses. Moving from district to taluk as the unit of analysis results in an eight-fold increase in sample size. We illustrate the value of taluk-level data in analyzing an important topic in economic development: the male-female sex ratio. Taluk-level data enable us to address questions on historical sex ratios, persistence, change over time, and differences between directly and indirectly ruled areas. Additionally, we investigate Kerala, a noted outlier, and its historical trajectory. Among other things, we find a narrowing of the overall sex ratio distribution over time, heterogeneity within indirectly ruled areas across South India in the past, and the absence of an advantage for Kerala in colonial times.</p>
+      </div>
+
+      <div class="research-item">
         <h3>Automation Risk, Policy Mapping, and Policy Preferences</h3>
         <div class="paper-actions">
           <button class="paper-link" onclick="toggleAbstract(this)">Abstract &#8595;</button>
           <a class="paper-link" href="assets/papers/automation_policy_mapping.pdf" target="_blank" rel="noopener noreferrer">Manuscript</a>
         </div>
         <p class="abstract">Do political preferences change in response to automation risk? Existing observational and experimental studies provide conflicting evidence. This study reconciles these findings by proposing a two-stage framework in which individuals should first perceive automation risk and then map that risk onto concrete policy responses. I test this argument using two preregistered survey experiments in the United States that vary whether automation risk is presented alone or linked to redistribution and regulatory policies. The results indicate that linking automation risk to these policies generally does not shift support, with the exception of increased support for slowing the adoption of new technologies in the workplace. These findings suggest that preference change depends on whether individuals connect risks to policy options, but that this process is conditional on specific policy domains and sensitive to the broader information environment.</p>
-      </div>
-
-      <div class="research-item">
-        <span class="status-badge">Under Review</span>
-        <h3>Investigating Taluk-Level Data for Colonial South India, 1891&#8211;1931</h3>
-        <p class="research-meta">with <a href="https://www.anil-menon.com/" target="_blank" rel="noopener noreferrer">Anil Menon</a> and <a href="https://www.alexander-persaud.com/" target="_blank" rel="noopener noreferrer">Alexander Persaud</a></p>
       </div>
     </div>
 
@@ -487,11 +495,6 @@
           <button class="paper-link" onclick="toggleAbstract(this)">Abstract &#8595;</button>
         </div>
         <p class="abstract">We propose usage of artificial intelligence (AI) algorithms for vision and natural language to assist in discovering potential determinants of human behavior that manual variable selection might miss. Our framework involves training a deep learning algorithm end-to-end to predict a target behavior of interest directly from unstructured data such as imagery and text that provides a naturalistic representation of the agent&#39;s decision-making environment. We then use explainable artificial intelligence (XAI) tools to discover underlying relationships learned by the algorithm. We provide information-theoretic grounding for the framework and develop new tools for translating machine-learned into human-interpretable relationships, an interface that becomes important as AI is integrated into social science research workflows. We illustrate how the approach surfaces novel relationships in two cases: understanding how Chinese social media monitors choose what content to censor and how the built environment affects the turnout decisions of Mexican voters.</p>
-      </div>
-
-      <div class="research-item">
-        <h3>AI on the Ballot: Is AI a Campaign Issue in the 2026 Midterms?</h3>
-        <p class="research-meta">with <a href="https://www.anil-menon.com/" target="_blank" rel="noopener noreferrer">Anil Menon</a></p>
       </div>
 
       <div class="research-item">
@@ -539,7 +542,7 @@
     <div class="cv-actions">
       <a href="assets/cv/CV_Zhu.pdf" download>Download PDF</a>
       <a href="assets/cv/CV_Zhu.pdf" target="_blank" rel="noopener noreferrer">Open in new tab</a>
-      <span class="cv-version">Current Version: September 2026</span>
+      <span class="cv-version">Current Version: November 2026</span>
     </div>
     <div class="cv-embed">
       <object data="assets/cv/CV_Zhu.pdf" type="application/pdf" width="100%" height="900">
